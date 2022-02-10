@@ -24,23 +24,10 @@ class MainView: UIView {
         return tableView
     }()
     
-    lazy var button: UIButton = {
-        let btn = UIButton()
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.addTarget(self, action: #selector(buttonPress), for: .touchUpInside)
-        btn.backgroundColor = .systemBlue
-        return btn
-    }()
-    
-    @objc func buttonPress(button:UIButton) {
-//        delegate?.didPressButton(button: button)
-    }
-    
     func configView() {
         backgroundColor = .white
         
         addSubview(tableView)
-//        addSubview(button)
         
         
         NSLayoutConstraint.activate([
@@ -48,13 +35,7 @@ class MainView: UIView {
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            
-//            button.topAnchor.constraint(equalTo: tableView.bottomAnchor),
-//            button.leadingAnchor.constraint(equalTo: leadingAnchor),
-//            button.trailingAnchor.constraint(equalTo: trailingAnchor),
-//            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-//            button.heightAnchor.constraint(equalToConstant: 30)
+            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
             
         
         ])

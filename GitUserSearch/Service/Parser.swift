@@ -11,22 +11,20 @@ struct Parser {
     // requestUsersURL = 'https://api.github.com/'
     // https://api.github.com/search/users
     // header = 'application/vnd.github.v3+json'
-        
-    fileprivate var baseURL = "https://api.github.com/"
     
         
         
     func fetchUserList(searchName: String, completionHandler: @escaping ([Item]) -> ()) {
             
-        let endPoint = "search/users"
-        let parameters: Parameters = [
-            "q": "\(searchName)in:name"
-            ]
+        let endPoint = "https://api.github.com/search/users?q=\(searchName)in:name"
+//        let parameters: Parameters = [
+//            "q": "\(searchName)in:name"
+//            ]
         let headers: HTTPHeaders = [
             "Accept": "application/vnd.github.v3+json"
             ]
         
-        AF.request(self.baseURL + endPoint, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: headers, interceptor: nil, requestModifier: nil).response { (responseData) in
+        AF.request(endPoint, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers, interceptor: nil, requestModifier: nil).response { (responseData) in
             switch responseData.result {
             case .success(let data):
                 do {
@@ -35,7 +33,8 @@ struct Parser {
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let userList = try decoder.decode(UserList.self, from: jsonData)
                     print(userList)
-                    completionHandler(userList.items)
+                    guard let items = userList.items else { return }
+                    completionHandler(items)
                 } catch {
                     print(error)
                 }

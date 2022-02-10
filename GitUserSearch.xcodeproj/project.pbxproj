@@ -29,6 +29,7 @@
 		C0091AB627B533DF00E42F83 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0091AB527B533DF00E42F83 /* Parser.swift */; };
 		C0091AB927B54B2700E42F83 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0091AB827B54B2700E42F83 /* String+.swift */; };
 		C0091ABB27B57DCF00E42F83 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0091ABA27B57DCF00E42F83 /* UIImageView+.swift */; };
+		C0091ABE27B5B7C800E42F83 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0091ABD27B5B7C700E42F83 /* UserList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		C0091AB527B533DF00E42F83 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		C0091AB827B54B2700E42F83 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		C0091ABA27B57DCF00E42F83 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		C0091ABD27B5B7C700E42F83 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		C681A257801609DC749BA8E5 /* Pods-GitUserSearch-GitUserSearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitUserSearch-GitUserSearchUITests.debug.xcconfig"; path = "Target Support Files/Pods-GitUserSearch-GitUserSearchUITests/Pods-GitUserSearch-GitUserSearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +149,7 @@
 				C0091AAC27B52E3100E42F83 /* Coordinator */,
 				C0091AAB27B52DF300E42F83 /* View */,
 				C0091AA927B52DD600E42F83 /* ViewController */,
-				C0091AB327B533C900E42F83 /* User.swift */,
+				C0091ABC27B5A86300E42F83 /* Model */,
 			);
 			path = GitUserSearch;
 			sourceTree = "<group>";
@@ -220,6 +222,15 @@
 				C0091ABA27B57DCF00E42F83 /* UIImageView+.swift */,
 			);
 			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		C0091ABC27B5A86300E42F83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0091AB327B533C900E42F83 /* User.swift */,
+				C0091ABD27B5B7C700E42F83 /* UserList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D23E401DB15CE63D7BF3E478 /* Pods */ = {
@@ -493,6 +504,7 @@
 				C0091AA627B52D0200E42F83 /* SearchCoordinator.swift in Sources */,
 				C0091AA427B52C5E00E42F83 /* AppCoordinator.swift in Sources */,
 				C0091AA027B5272E00E42F83 /* DetailViewController.swift in Sources */,
+				C0091ABE27B5B7C800E42F83 /* UserList.swift in Sources */,
 				C0091AB427B533C900E42F83 /* User.swift in Sources */,
 				C0091A6C27B45B9A00E42F83 /* AppDelegate.swift in Sources */,
 				C0091AB927B54B2700E42F83 /* String+.swift in Sources */,
