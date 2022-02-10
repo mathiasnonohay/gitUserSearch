@@ -19,8 +19,10 @@ struct User: Codable {
     let avatarURL: URL?
     let gravatarID: String?
     let url, htmlURL, followersURL: URL?
-    let followingURL, gistsURL, starredURL: URL?
-    let subscriptionsURL, organizationsURL, reposURL: URL?
+    let followingURL: String?
+    let gistsURL: String?
+    let starredURL: String?
+    let subscriptionsURL, organizationsURL, reposURL: String?
     let eventsURL: String?
     let receivedEventsURL: String?
     let type: String?
@@ -33,7 +35,7 @@ struct User: Codable {
     let bio: String?
     let twitterUsername: String?
     let publicRepos, publicGists, followers, following: Int?
-    let createdAt, updatedAt: Date?
+    let createdAt, updatedAt: String?
 
     enum CodingKeys: String, CodingKey {
         case login, id

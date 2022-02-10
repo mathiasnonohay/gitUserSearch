@@ -28,6 +28,7 @@
 		C0091AB427B533C900E42F83 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0091AB327B533C900E42F83 /* User.swift */; };
 		C0091AB627B533DF00E42F83 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0091AB527B533DF00E42F83 /* Parser.swift */; };
 		C0091AB927B54B2700E42F83 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0091AB827B54B2700E42F83 /* String+.swift */; };
+		C0091ABB27B57DCF00E42F83 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0091ABA27B57DCF00E42F83 /* UIImageView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		C0091AB327B533C900E42F83 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C0091AB527B533DF00E42F83 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		C0091AB827B54B2700E42F83 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		C0091ABA27B57DCF00E42F83 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		C681A257801609DC749BA8E5 /* Pods-GitUserSearch-GitUserSearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitUserSearch-GitUserSearchUITests.debug.xcconfig"; path = "Target Support Files/Pods-GitUserSearch-GitUserSearchUITests/Pods-GitUserSearch-GitUserSearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				C0091AB827B54B2700E42F83 /* String+.swift */,
+				C0091ABA27B57DCF00E42F83 /* UIImageView+.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			files = (
 				C0091A9E27B45F0300E42F83 /* UserListTableViewCell.swift in Sources */,
 				C0091A7027B45B9A00E42F83 /* SearchViewController.swift in Sources */,
+				C0091ABB27B57DCF00E42F83 /* UIImageView+.swift in Sources */,
 				C0091A9C27B45DF800E42F83 /* MainView.swift in Sources */,
 				C0091AA827B52D6200E42F83 /* DetailCoordinator.swift in Sources */,
 				C0091AB627B533DF00E42F83 /* Parser.swift in Sources */,

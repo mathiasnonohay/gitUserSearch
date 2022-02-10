@@ -20,6 +20,6 @@ final class DetailCoordinator: Coordinator {
     func start() {
         let detailViewController = DetailViewController()
         detailViewController.username = self.username
-        navigationController.setViewControllers([detailViewController], animated: true)
+        navigationController.pushViewController(detailViewController, animated: true)
     }
 }
