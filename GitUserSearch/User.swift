@@ -11,15 +11,16 @@ struct Root: Codable {
     let user: [User]
 }
 
+// MARK: - User
 struct User: Codable {
     let login: String?
     let id: Int?
     let nodeID: String?
-    let avatarURL: String?
+    let avatarURL: URL?
     let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
+    let url, htmlURL, followersURL: URL?
+    let followingURL, gistsURL, starredURL: URL?
+    let subscriptionsURL, organizationsURL, reposURL: URL?
     let eventsURL: String?
     let receivedEventsURL: String?
     let type: String?
@@ -62,73 +63,11 @@ struct User: Codable {
     }
 }
 
-struct Roots: Codable {
-    let contacts: [Contact]
-}
-
-// MARK: - Contact
-struct Contact: Codable {
-    let id, name, email: String
-    let address: Address
-    let gender: Gender
-    let phone: Phone
-}
-
-enum Address: String, Codable {
-    case xxXxXxxxXStreetXCountry = "xx-xx-xxxx,x - street, x - country"
-}
-
-enum Gender: String, Codable {
-    case female = "female"
-    case male = "male"
-}
-
-// MARK: - Phone
-struct Phone: Codable {
-    let mobile: Mobile
-    let home, office: Home
-}
-
-enum Home: String, Codable {
-    case the00000000 = "00 000000"
-}
-
-enum Mobile: String, Codable {
-    case the910000000000 = "+91 0000000000"
-}
-
-struct Cat: Codable {
-    let status: Status
-    let id, user, text, type: String
-    let deleted: Bool
-    let createdAt, updatedAt: String
-    let v: Int
-
-    enum CodingKeys: String, CodingKey {
-        case status
-        case id = "_id"
-        case user, text, type, deleted, createdAt, updatedAt
-        case v = "__v"
-    }
-}
-
-// MARK: - Status
-struct Status: Codable {
-    let verified: Bool?
-    let sentCount: Int
-}
-
-import Foundation
-
-// MARK: - Welcome
+// MARK: - UserList
 struct UserList: Codable {
-    let totalCount: Int?
-    let incompleteResults: Bool?
     let items: [Item]
 
     enum CodingKeys: String, CodingKey {
-        case totalCount = "total_count"
-        case incompleteResults = "incomplete_results"
         case items
     }
 }
@@ -137,16 +76,22 @@ struct UserList: Codable {
 struct Item: Codable {
     let login: String
     let id: Int
-    let nodeID: String
-    let avatarURL: String
-    let gravatarID: String
-    let url, htmlURL, followersURL: String
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String
-    let receivedEventsURL: String
+    let nodeID: String?
+    let avatarURL: String?
+    let gravatarID: String?
+    let url: String
+    let htmlURL: String?
+    let followersURL: String?
+    let followingURL: String?
+    let gistsURL: String?
+    let starredURL: String?
+    let subscriptionsURL: String?
+    let organizationsURL: String?
+    let reposURL: String?
+    let eventsURL: String?
+    let receivedEventsURL: String?
     let type: String
-    let siteAdmin: Bool
+    let siteAdmin: Bool?
     let score: Int
 
     enum CodingKeys: String, CodingKey {
@@ -169,10 +114,4 @@ struct Item: Codable {
         case siteAdmin = "site_admin"
         case score
     }
-}
-
-struct TaskEntry: Codable {
-    let id: Int
-    let tagName: String
-    let name: String
 }

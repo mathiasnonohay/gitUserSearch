@@ -7,15 +7,7 @@
 
 import UIKit
 
-protocol MainViewDelegate: NSObject {
-    
-    func didPressButton(button:UIButton)
-    
-}
-
 class MainView: UIView {
-    
-    weak var delegate:MainViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,14 +33,14 @@ class MainView: UIView {
     }()
     
     @objc func buttonPress(button:UIButton) {
-        delegate?.didPressButton(button: button)
+//        delegate?.didPressButton(button: button)
     }
     
     func configView() {
         backgroundColor = .white
         
         addSubview(tableView)
-        addSubview(button)
+//        addSubview(button)
         
         
         NSLayoutConstraint.activate([
@@ -56,12 +48,13 @@ class MainView: UIView {
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             
-            button.topAnchor.constraint(equalTo: tableView.bottomAnchor),
-            button.leadingAnchor.constraint(equalTo: leadingAnchor),
-            button.trailingAnchor.constraint(equalTo: trailingAnchor),
-            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            button.heightAnchor.constraint(equalToConstant: 30)
+//            button.topAnchor.constraint(equalTo: tableView.bottomAnchor),
+//            button.leadingAnchor.constraint(equalTo: leadingAnchor),
+//            button.trailingAnchor.constraint(equalTo: trailingAnchor),
+//            button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+//            button.heightAnchor.constraint(equalToConstant: 30)
             
         
         ])

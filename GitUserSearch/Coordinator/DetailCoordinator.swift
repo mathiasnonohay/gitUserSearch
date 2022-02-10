@@ -8,8 +8,10 @@
 import UIKit
 
 final class DetailCoordinator: Coordinator {
+    
     private(set) var childCoordinators: [Coordinator] = []
     private let navigationController: UINavigationController
+    var username = String.empty
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -17,6 +19,7 @@ final class DetailCoordinator: Coordinator {
     
     func start() {
         let detailViewController = DetailViewController()
+        detailViewController.username = self.username
         navigationController.setViewControllers([detailViewController], animated: true)
     }
 }

@@ -9,6 +9,12 @@ import UIKit
 
 class DetailView: UIView {
 
+    public var nameUser: String = String.empty {
+        didSet {
+            self.userName.text = nameUser
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configView()
@@ -33,6 +39,7 @@ class DetailView: UIView {
     
     lazy var userName: UILabel = {
         let lbl = UILabel()
+        lbl.text = nameUser
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
